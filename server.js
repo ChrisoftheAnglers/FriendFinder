@@ -17,6 +17,8 @@ var apiRouter = require("./app/routing/apiRoutes");
 app.use(htmlRouter);
 app.use("/api", apiRouter); // Using '/api' as the first parameter lets us define part of the route outside
                             // of the apiRouter object to include '/api' before it
+                            // Ex. To get the friends JSON, the address /api/friends will be used instead of
+                            // /friends, which was defined in the router
 
 // Initialize Listeners
 app.listen(PORT, function() {
